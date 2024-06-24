@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Termux 기본 작업
 termux-setup-storage
 pkg update
 
@@ -125,3 +126,8 @@ npm install -g @adobe/css-tools@4.3.2 \
     wasmoon@1.16.0 \
     wavefile@11.0.0 \
     web-streams-polyfill@3.3.3
+
+# risuai 설치
+git clone https://github.com/kwaroran/RisuAI
+cd RisuAI
+npm i @swc/core-android-arm64 && export NODE_OPTIONS=--max-old-space-size=6144 && bash server.sh 
