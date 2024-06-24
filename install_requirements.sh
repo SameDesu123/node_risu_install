@@ -1,5 +1,8 @@
 #!/bin/bash
 
+termux-setup-storage
+pkg update
+
 # Termux 패키지 설치
 pkg install -y \
   apt autoconf automake bash bc binutils-bin binutils-libs binutils \
