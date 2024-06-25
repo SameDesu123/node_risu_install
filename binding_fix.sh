@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# Set your Android NDK path here
-ANDROID_NDK_PATH="$PWD/android-ndk-r21d"
+# android-ndk-r21d 다운로드 및 설치
+pkg install wget unzip
+cd $HOME
+wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
+unzip android-ndk-r21d-linux-x86_64.zip
+export ANDROID_NDK_HOME=$HOME/android-ndk-r21d
+export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
 
 # Path to the binding.gyp file relative to the current directory
 BINDING_GYP_PATH="$PWD/node-canvas/binding.gyp"
