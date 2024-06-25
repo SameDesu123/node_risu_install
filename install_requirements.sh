@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Termux 기본 작업
-termux-setup-storage
-pkg update
+termux-setup-storage # 저장공간 권한 허용
+pkg update # termux 기본 패키지 확인
 
 # Termux 패키지 설치
 pkg install -y \
@@ -36,8 +36,9 @@ pkg install -y \
   xz-utils zlib zstd
 
 # 프로젝트 디렉토리로 이동
-git clone https://github.com/kwaroran/RisuAI
-cd /data/data/com.termux/files/home/RisuAI
+git clone https://github.com/kwaroran/RisuAI # RisuAI 소스코드 다운로드
+cd # 만일을 대비해서 최상위 디렉토리로 이동
+cd RisuAI # 다운로드 받은 RisuAI 폴더로 이동
 
 # npm 초기화 및 설치
 npm init -y
