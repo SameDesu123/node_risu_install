@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Set your Android NDK path here
-ANDROID_NDK_PATH="$HOME/android-ndk-r21d"
+ANDROID_NDK_PATH="/android-ndk-r21d"
 
 # Path to the binding.gyp file
-BINDING_GYP_PATH="$HOME/node-canvas/binding.gyp"
+BINDING_GYP_PATH="/node-canvas/binding.gyp"
 
 # Check if the binding.gyp file exists
 if [ ! -f "$BINDING_GYP_PATH" ]; then
