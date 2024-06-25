@@ -35,97 +35,109 @@ pkg install -y \
   unzip util-linux wget x11-repo xorg-util-macros xorgproto xxhash \
   xz-utils zlib zstd
 
-# npm 모듈 설치
-npm install -g @adobe/css-tools@4.3.2 \
-    @aws-crypto/sha256-js@5.2.0 \
-    @capacitor/android@5.7.6 \
-    @capacitor/assets@3.0.5 \
-    @capacitor/cli@5.7.6 \
-    @capacitor/core@5.7.6 \
-    @capacitor/filesystem@5.2.2 \
-    @dqbd/tiktoken@1.0.15 \
-    @huggingface/jinja@0.2.2 \
-    @mlc-ai/web-tokenizers@0.1.4 \
-    @risuai/ccardlib@0.4.2 \
-    @smithy/protocol-http@3.3.0 \
-    @smithy/signature-v4@2.3.0 \
-    @sveltejs/vite-plugin-svelte@3.1.1 \
-    @swc/core-android-arm64@1.3.11 \
-    @swc/core@1.5.7 \
-    @tailwindcss/typography@0.5.13 \
+# 프로젝트 디렉토리로 이동
+cd /data/data/com.termux/files/home/RisuAI
+
+# npm 초기화 및 설치
+npm init -y
+
+# dependencies 설치
+npm install \
+    @adobe/css-tools@4.3.2 \
+    @aws-crypto/sha256-js@^5.2.0 \
+    @capacitor/android@^5.6.0 \
+    @capacitor/core@^5.6.0 \
+    @capacitor/filesystem@^5.2.0 \
+    @dqbd/tiktoken@^1.0.7 \
+    @huggingface/jinja@^0.2.2 \
+    @mlc-ai/web-tokenizers@^0.1.2 \
+    @risuai/ccardlib@^0.4.1 \
+    @smithy/protocol-http@^3.0.12 \
+    @smithy/signature-v4@^2.0.19 \
     @tauri-apps/api@1.5.3 \
-    @tauri-apps/cli@1.5.11 \
-    @tsconfig/svelte@3.0.0 \
-    @types/blueimp-md5@2.18.2 \
-    @types/codemirror@5.60.15 \
-    @types/dompurify@3.0.5 \
-    @types/libsodium-wrappers-sumo@0.7.8 \
-    @types/lodash.isequal@4.5.8 \
-    @types/lodash@4.17.5 \
-    @types/marked@5.0.2 \
-    @types/node@18.19.36 \
-    @types/showdown@2.0.6 \
-    @types/sortablejs@1.15.8 \
-    @types/streamsaver@2.0.4 \
-    @types/three@0.154.0 \
-    @types/uuid@9.0.8 \
-    @types/wicg-file-system-access@2020.9.8 \
-    @xenova/transformers@2.17.2 \
-    autoprefixer@10.4.19 \
-    blueimp-md5@2.19.0 \
-    body-parser@1.20.2 \
-    buffer@6.0.3 \
-    codemirror@5.65.16 \
-    core-js@3.37.1 \
-    cors@2.8.5 \
-    crc@4.3.2 \
-    dompurify@3.1.5 \
-    eventsource-parser@1.1.2 \
-    exifr@7.1.3 \
-    express@4.19.2 \
-    fflate@0.8.2 \
-    gpt-3-encoder@1.1.4 \
-    gpt3-tokenizer@1.1.5 \
-    html-to-image@1.11.11 \
-    internal-ip@7.0.0 \
-    isomorphic-dompurify@1.13.0 \
-    jszip@3.10.1 \
-    libsodium-wrappers-sumo@0.7.13 \
-    localforage@1.10.0 \
-    lodash@4.17.21 \
-    lucide-svelte@0.292.0 \
-    marked@5.1.2 \
-    ml-distance@4.0.1 \
+    @xenova/transformers@^2.17.1 \
+    blueimp-md5@^2.19.0 \
+    body-parser@^1.20.2 \
+    buffer@^6.0.3 \
+    codemirror@^5.65.16 \
+    core-js@^3.35.0 \
+    cors@^2.8.5 \
+    crc@^4.3.2 \
+    dompurify@^3.0.8 \
+    eventsource-parser@^1.1.2 \
+    exifr@^7.1.3 \
+    express@^4.18.2 \
+    fflate@^0.8.1 \
+    gpt-3-encoder@^1.1.4 \
+    gpt3-tokenizer@^1.1.5 \
+    html-to-image@^1.11.11 \
+    isomorphic-dompurify@^1.13.0 \
+    jszip@^3.10.1 \
+    libsodium-wrappers-sumo@^0.7.13 \
+    localforage@^1.10.0 \
+    lodash@^4.17.21 \
+    lucide-svelte@^0.292.0 \
+    marked@^5.1.2 \
+    ml-distance@^4.0.1 \
     mobile-drag-drop@3.0.0-rc.0 \
-    msgpackr@1.10.2 \
-    node-html-parser@6.1.13 \
-    ollama@0.5.2 \
-    pdfjs-dist@4.3.136 \
-    peerjs@1.5.4 \
-    png-chunk-text@1.0.0 \
-    png-chunks-encode@1.0.0 \
-    png-chunks-extract@1.0.0 \
-    postcss@8.4.38 \
-    rollup@3.29.4 \
-    showdown@2.1.0 \
-    sortablejs@1.15.2 \
-    streamsaver@2.0.6 \
-    svelte-awesome-color-picker@3.1.0 \
-    svelte-check@3.6.3 \
-    svelte-preprocess@5.1.3 \
-    svelte@4.2.8 \
-    tailwindcss@3.4.4 \
-    three@0.154.0 \
-    tippy.js@6.3.7 \
-    tslib@2.6.3 \
-    typescript@5.4.5 \
-    uuid@9.0.1 \
-    vite-plugin-top-level-await@1.4.1 \
-    vite-plugin-wasm@3.3.0 \
-    vite@5.2.12 \
-    wasmoon@1.16.0 \
-    wavefile@11.0.0 \
-    web-streams-polyfill@3.3.3
+    msgpackr@^1.10.1 \
+    node-html-parser@^6.1.12 \
+    ollama@^0.5.0 \
+    pdfjs-dist@^4.0.379 \
+    peerjs@^1.5.2 \
+    png-chunk-text@^1.0.0 \
+    png-chunks-encode@^1.0.0 \
+    png-chunks-extract@^1.0.0 \
+    rollup@^3.29.4 \
+    showdown@^2.1.0 \
+    sortablejs@^1.15.2 \
+    streamsaver@^2.0.6 \
+    svelte-awesome-color-picker@^3.1.0 \
+    three@^0.154.0 \
+    tippy.js@^6.3.7 \
+    uuid@^9.0.1 \
+    wasmoon@^1.16.0 \
+    wavefile@^11.0.0 \
+    web-streams-polyfill@^3.3.2
+
+# devDependencies 설치
+npm install --save-dev \
+    @capacitor/assets@^3.0.4 \
+    @capacitor/cli@^5.6.0 \
+    @sveltejs/vite-plugin-svelte@^3.0.1 \
+    @swc/core@1.5.7 \
+    @tailwindcss/typography@^0.5.10 \
+    @tauri-apps/cli@1.5.11 \
+    @tsconfig/svelte@^3.0.0 \
+    @types/blueimp-md5@^2.18.2 \
+    @types/codemirror@^5.60.15 \
+    @types/dompurify@^3.0.5 \
+    @types/libsodium-wrappers-sumo@^0.7.8 \
+    @types/lodash@^4.14.202 \
+    @types/lodash.isequal@^4.5.8 \
+    @types/marked@^5.0.2 \
+    @types/node@^18.19.7 \
+    @types/showdown@^2.0.6 \
+    @types/sortablejs@^1.15.7 \
+    @types/streamsaver@^2.0.4 \
+    @types/three@^0.154.0 \
+    @types/uuid@^9.0.7 \
+    @types/wicg-file-system-access@^2020.9.8 \
+    autoprefixer@^10.4.16 \
+    internal-ip@^7.0.0 \
+    postcss@^8.4.33 \
+    svelte@^4.2.8 \
+    svelte-check@^3.6.3 \
+    svelte-preprocess@^5.1.3 \
+    tailwindcss@^3.4.1 \
+    tslib@^2.6.2 \
+    typescript@^5.3.3 \
+    vite@^5.2.12 \
+    vite-plugin-top-level-await@^1.4.1 \
+    vite-plugin-wasm@^3.3.0
+
+# 스크립트 완료 메시지
+echo "npm 패키지 설치가 완료되었습니다."
 
 # risuai 설치
 git clone https://github.com/kwaroran/RisuAI
