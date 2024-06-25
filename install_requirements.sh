@@ -21,6 +21,7 @@ npm init -y
 
 # dependencies 설치
 npm install -g pnpm
+npm install -g vite
 pnpm install
 
 # 스크립트 완료 메시지
