@@ -35,6 +35,9 @@ pkg install -y \
   unzip util-linux wget x11-repo xorg-util-macros xorgproto xxhash \
   xz-utils zlib zstd
 
+
+## https://github.com/Automattic/node-canvas/issues/1447#issuecomment-506507145
+
 # 프로젝트 디렉토리로 이동
 git clone https://github.com/kwaroran/RisuAI # RisuAI 소스코드 다운로드
 cd # 만일을 대비해서 최상위 디렉토리로 이동
