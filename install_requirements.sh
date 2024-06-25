@@ -36,6 +36,7 @@ pkg install -y \
   xz-utils zlib zstd
 
 # 프로젝트 디렉토리로 이동
+git clone https://github.com/kwaroran/RisuAI
 cd /data/data/com.termux/files/home/RisuAI
 
 # npm 초기화 및 설치
@@ -140,6 +141,4 @@ npm install --save-dev \
 echo "npm 패키지 설치가 완료되었습니다."
 
 # risuai 설치
-git clone https://github.com/kwaroran/RisuAI
-cd RisuAI
 npm i @swc/core-android-arm64 && export NODE_OPTIONS=--max-old-space-size=6144 && bash server.sh 
